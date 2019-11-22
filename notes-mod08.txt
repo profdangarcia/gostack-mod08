@@ -1,0 +1,15 @@
+############### Estrutura do Projeto
+// criar a estrutura normalmente com eslint, prettier e editorconfig
+// nova dependencia para utilizar os hooks com o eslint como dev dependecy
+yarn add eslint-plugin-react-hooks -D
+// alterar o arquivo eslintrc para utilizar o plugin react-hooks
+ plugins: [
+    'react',
+    'prettier',
+    'react-hooks'
+  ],
+
+// novas rules no arquivo do eslintrc
+'react-hooks/rules-of-hooks': 'error',
+'react-hooks/exhaustive-deps': 'warn'
+
