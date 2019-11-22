@@ -15,3 +15,12 @@ yarn add eslint-plugin-react-hooks -D
 
 ################# UseState
 
+################ useEffect
+// substitui os métodos do ciclo de vida dos componentes de classe
+
+################ useMemo
+// realiza cálculos ou retornos simples baseado na alteração de algum estado
+
+################ useCallback
+// parecido com o useMemo mas retorna uma função completa
+// utilizado para evitar que as funções definidas não sejam recriadas toda vez pelo javascript da página

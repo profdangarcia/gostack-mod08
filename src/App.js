@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo, useCallback } from 'react';
 
 function App() {
   /** HOOK useState - Estados */
@@ -7,10 +7,17 @@ function App() {
   const [techs, setTechs] = useState(['React', 'Node', 'React Native']);
   const [newTech, setNewTech] = useState('');
 
-  function handleAdd() {
+  /** Função antes de utilizar o useCallback */
+  // function handleAdd() {
+  //   setTechs([...techs, newTech]);
+  //   setNewTech('');
+  // }
+
+  /** HOOK useCallback - para evitar recriação de funções desnecessariamente */
+  const handleAdd = useCallback(() => {
     setTechs([...techs, newTech]);
     setNewTech('');
-  }
+  }, [newTech, techs]);
 
   /** HOOK useEffect - ciclo de vida */
   // useEffect substitui as funções de ciclo de vida
